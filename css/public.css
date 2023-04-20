@@ -1,6 +1,44 @@
-@font-face {
-    font-family: 3DIsometric-Black;
-    src: url('../font/TrueType/3DIsometric-Regular.ttf') format('truetype');
+/* 默认样式 */
+.box {
+    position: fixed;
+    top: 170px;
+    left: 150px;
+    width: 120px;
+    height: auto;
+    text-align: center;
+}
+
+.box a {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.box a:hover {
+    background-color: #fff;
+    border: 2px solid #000000;
+    box-shadow: 4px 4px 0px 2px rgba(230, 0, 18, 0.9);
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* 媒体查询 */
+@media screen and (max-width: 768px) {
+    .box {
+        top: 50px;
+        left: 50px;
+        width: 80px;
+    }
+
+    .box a {
+        font-size: 12px;
+    }
 }
 
 .top-n-b {
@@ -43,19 +81,18 @@
     position: absolute;
     width: 30px;
     height: 30px;
-    left: 531px;
+    left: 431px;
     border-radius: 50px;
 }
 
 .name {
     position: absolute;
-    width: 19px;
+    width: auto;
     height: 12px;
-    left: 571px;
+    left: 471px;
     font-family: 'Taipei Sans TC Beta';
     font-style: normal;
     font-weight: 700;
-    font-size: 12px;
     line-height: 12px;
 
     color: #000000;
@@ -75,39 +112,30 @@
     /* 使用 transform 属性和 translateY() 函数将元素向上移动一定的距离，从而实现垂直居中 */
 }
 
-/* 布局样式 */
-.sidebar {
-    position: fixed;
-    top: 170px;
-    left: 150px;
-    width: 120px;
-    height: auto;
-    text-align: center;
-}
-
-/* 颜色和样式 */
-.sidebar a {
-    display: block;
-    color: #000;
-    font-size: 16px;
-    text-decoration: none;
-    height: 30px;
-    line-height: 30px;
-    padding: 10px;
-    border: 2px solid rgba(0, 0, 0, 0);
-}
-
-.sidebar a:hover {
-    background-color: #fff;
-    border: 2px solid #000000;
-    box-shadow: 4px 4px 0px 2px rgba(230, 0, 18, 0.9);
-    border-radius: 8px;
-    padding: 10px;
-    font-weight: bold;
-}
-
-.liebiao {
+.mail {
     position: absolute;
+    margin: auto;
+    left: 541px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.mail img {
+    width: 24px;
+    height: 24px;
+    margin: auto;
+}
+
+.top-n-b a {
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.container {
+    position:relative;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -120,7 +148,7 @@
     top: 100px;
 }
 
-.box {
+.item {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -140,31 +168,27 @@
 
 .hint {
     position: relative;
-    font-family: 'Public Pixel';
+    font-family: 'PublicPixel';
     font-size: 24px;
     height: auto;
     max-width: 577px;
     font-weight: bold;
     color: rgba(230, 0, 18, 0.9);
-    margin-top: 17px;
-    margin-bottom: 17px;
     background-image: linear-gradient(to left, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, rgba(230, 0, 18, 0.9) 50%, rgba(230, 0, 18, 0.9) 100%);
     background-size: 200% 100%;
     background-position: right;
     display: inline-block;
     transition: background-position 0.5s, color 0.5s;
     letter-spacing: 0.1em;
+    margin: 16px 0px 16px 0px;
 }
 
-.box:hover .hint {
+.item:hover .hint {
     background-position: left;
     color: white;
 }
 
 .text {
-    margin-top: 17px;
-    margin-bottom: 17px;
-    margin-top: 0;
     font-size: 14px;
     height: auto;
     max-width: 577px;
@@ -172,7 +196,90 @@
     line-height: 24px;
 }
 
-button {
+.article {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 10px 0px 10px 0px;
+    font-family: 'Taipei Sans TC Beta';
+}
+
+.article .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.article .title a {
+    text-decoration: none;
+    color: inherit;
+    font-style: normal;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 16px;
+    font-family: 'Taipei Sans TC Beta';
+
+}
+
+.article .title a:hover{
+    color: #3370FF;
+}
+
+.article .label {
+    display: inline;
+    position: relative;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: 'Taipei Sans TC Beta';
+    font-weight: bold;
+    color: white;
+    padding: 3px 8px;
+}
+.article .l1{
+    background: #3370FF;
+}
+
+.article .l2{
+    background: #11be45;
+}
+
+
+.article .preview{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.article .preview img {
+    width: 236px;
+    height: 143px;
+}
+
+.article .preview .summary {
+    font-size: 14px;
+    font-family: 'Taipei Sans TC Beta';
+    color: #3b393a;
+    line-height:24px;
+}
+
+hr{
+    margin: 20px 0px 20px 0px;
+    color: #3b393a;
+}
+
+.shengming {
+    margin-top: auto;
+    text-align: center;
+    padding: 10px;
+    color: #3b393a;
+    padding: 50px;
+  }
+
+  .down_bt {
     box-sizing: border-box;
     /* Auto layout */
     margin-top: 20px;
@@ -189,7 +296,7 @@ button {
 
 }
 
-button p {
+.down_bt p {
     width: auto;
     height: 16px;
     margin-top: 0;
@@ -207,7 +314,7 @@ button p {
     flex-grow: 0;
 }
 
-button img {
+.down_bt img {
     width: 20px;
     height: 20px;
     color: rgba(255, 255, 255, 0.9);
@@ -218,9 +325,8 @@ button img {
     flex-grow: 0;
 }
 
-button:active {
+.down_bt:active {
     transform: translateY(2px);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     background-color: #D10000;
   }
-  

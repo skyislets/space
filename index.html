@@ -5,46 +5,97 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
-    <link rel="stylesheet" href="../css/public.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>空x BLOG</title>
+    <link href="./css/public.css" rel="stylesheet">
+    <link rel="icon" href="./svg/islet.svg" type="image/x-icon">
 </head>
 
 <body>
+    <div class='box'>
+        <a>个人简历</a>
+        <a>关于本站</a>
+        <a>文章作品</a>
+    </div>
+
     <div class="top-n-b">
         <div class="welcome y-center">欢迎来到我的个人网站～！</div>
-        <img class="avatar y-center" src="../images/IMG_8340.jpg" alt="">
+        <img class="avatar y-center" src="./images/IMG_8340.jpg" alt="头像" />
         <div class="name y-center">空x</div>
+        <a href="mailto:baikongx@gmail.com?subject=请描述联系我的需求">
+            <div class='mail y-center'>
+                <img src="./svg/mailsvg.svg" />
+                <span>邮箱</span>
+            </div>
+        </a>
     </div>
-    <div class="sidebar">
-        <a href="#" target="_blank">关于本站</a>
-        <a href="#" target="_blank">个人简历</a>
-    </div>
-    <div class="liebiao">
-        <div class="box">
+
+    <div class='container'>
+        <div class="item">
             <p class="hint">ABOUT</p>
             <p class="text">
-                期望通过这个网站学习JavaScript、CSS、HTML代码编写、SQL数据库管理、FigmaUI设计，并利用各种AI工具提高效率；会在此站分享建设过程、个人作品展示、原创内容（动态、文章、视频、音乐）。
+                期望通过这个网站学习JavaScript、CSS、HTML代码编写、React框架、SQL数据库管理、FigmaUI设计，并利用各种AI工具提高效率；会在此站分享建设过程、个人作品展示、原创内容（动态、文章、视频、音乐）。
             </p>
         </div>
 
-        <div class="box">
+        <div class="item">
+            <p class="hint">ARTICLE</p>
+            <div>
+
+                <div class='article'>
+                    <div class='title'>
+                        <a href="https://lmu9c5endh.feishu.cn/docx/UmHZdioJqoFQSBxK7nAcAf4YnPg?from=from_copylink"
+                            target="_blank" rel="noreferrer">
+                            品牌服务数字化供应链产品-PRD
+                        </a>
+                        <div class='label l1'>产品设计</div>
+                    </div>
+                    <div class='preview'>
+                        <img src="./images/pinpaifuwu.jpg" alt="" />
+                        <div class='summary'>
+                            项目本身背景为将品牌传统向线下渠道拓展模式为样本向数字化模式转型，实现从品牌推广至数据复盘的规范化、流程化、数据化；期望能通过此平台让品牌方像运营线上一样运营线下...
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class='article'>
+                    <div class='title'>
+                        <a href="https://lmu9c5endh.feishu.cn/docx/TGoWdSBSzo89ALx5XKMcrep6nth" target="_blank"
+                            rel="noreferrer">
+                            海外阅读 APP 竞品分析：Tapon VS Chereads
+                        </a>
+                        <div class='label l2'>竞品分析</div>
+                    </div>
+                    <div class='preview'>
+                        <img src="./images/haiwaiyuedu.jpg" alt="" />
+                        <div class='summary'>
+                            通过调研对比同类型出海阅读类产品，分析双方产品在产品功能、交互体验、定价模式等基础信息的差异，并根据差异点分析对应可能产生的影响；为产品迭代作为有效参考...
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="item">
             <p class="hint">RESUME</p>
             <p class="text">5年互联网产品经验，熟练掌握客户端&服务端产品设计，对to
                 b及SaaS/CRP/ERM平台产品有深入认识，擅长多角色、多端口、多业务流，业务管理及BI功能产品设计；有独立负责产品从0-1全流程搭建经验，能够基于业务模式...
-                <br>
-                <a href="../document/白雪松-baikongx@gmail.com.pdf" download style="text-decoration: none;">
-                    <button>
-                        <img src="../svg/down.svg" alt="icon" style="margin: auto;">
+                <br />
+                <a href="./document/白雪松-baikongx@gmail.com.pdf" download style="text-decoration: none;">
+                    <button class='down_bt'>
+                        <img src="./svg/down.svg" alt="icon" style="margin: auto;">
                         <p>下载PDF简历</p>
                     </button>
                 </a>
-
-
+            </p>
         </div>
     </div>
+    <div class='container'>
+        <div class='shengming'>©空X的个人网站</div>
+    </div>
 
-    <script src="../script/蜘蛛网特效的副本.js"></script>
+    <script src="./script/蜘蛛网特效的副本.js"></script>
 </body>
 
 </html>
