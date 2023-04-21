@@ -8,36 +8,54 @@
     <title>空x BLOG</title>
     <link href="./css/public.css" rel="stylesheet">
     <link rel="icon" href="./svg/islet.svg" type="image/x-icon">
+
 </head>
 
 <body>
     <div class='box'>
-        <a>个人简历</a>
-        <a>关于本站</a>
-        <a>文章作品</a>
-    </div>
-
-    <div class="top-n-b">
-        <div class="welcome y-center">欢迎来到我的个人网站～！</div>
-        <img class="avatar y-center" src="./images/IMG_8340.jpg" alt="头像" />
-        <div class="name y-center">空x</div>
-        <a href="mailto:baikongx@gmail.com?subject=请描述联系我的需求">
-            <div class='mail y-center'>
-                <img src="./svg/mailsvg.svg" />
-                <span>邮箱</span>
-            </div>
+        <a href="#" data-target="about">关于本站</a>
+        <a href="#" data-target="article">文章作品</a>
+        <a href="#" data-target="resume">个人简历</a>
+        <a href="#" id="back-to-top">
+            <img src="./svg/backtop.svg" alt="Back to top">
         </a>
     </div>
 
+    <div class="top-n-b">
+        <div class="welcome">欢迎来到我的个人网站～！</div>
+        <div class="kongx">
+            <a class="link" href="#">
+                <img class="avatar" src="./images/IMG_8340.jpg" alt="头像" />
+                <div class="name">空x</div>
+                <img class="drop_bt" src="./svg/lamb-bottom.svg">
+            </a>
+
+            <div class="dropdown">
+                <a href="mailto:baikongx@gmail.com?subject=请描述联系我的需求">
+                    <div class='mail'>
+                        <img src="./svg/mailsvg.svg" />
+                        <span>邮箱</span>
+                    </div>
+                </a>
+                <a id="wechat-link" href="#">
+                    <div class="wechat">
+                        <img src="./svg/wechat.svg">
+                        <span>微信</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
     <div class='container'>
-        <div class="item">
+        <div class="item" id="about">
             <p class="hint">ABOUT</p>
             <p class="text">
                 期望通过这个网站学习JavaScript、CSS、HTML代码编写、React框架、SQL数据库管理、FigmaUI设计，并利用各种AI工具提高效率；会在此站分享建设过程、个人作品展示、原创内容（动态、文章、视频、音乐）。
             </p>
         </div>
 
-        <div class="item">
+        <div class="item" id="article">
             <p class="hint">ARTICLE</p>
             <div>
 
@@ -77,7 +95,7 @@
 
             </div>
         </div>
-        <div class="item">
+        <div class="item" id="resume">
             <p class="hint">RESUME</p>
             <p class="text">5年互联网产品经验，熟练掌握客户端&服务端产品设计，对to
                 b及SaaS/CRP/ERM平台产品有深入认识，擅长多角色、多端口、多业务流，业务管理及BI功能产品设计；有独立负责产品从0-1全流程搭建经验，能够基于业务模式...
@@ -94,8 +112,9 @@
     <div class='container'>
         <div class='shengming'>©空X的个人网站</div>
     </div>
-
+    <script src="./script/box.js"></script>
     <script src="./script/蜘蛛网特效的副本.js"></script>
+    <script src="./script/topnav.js"></script>
 </body>
 
 </html>
