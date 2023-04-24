@@ -1,16 +1,17 @@
-
 @font-face {
-  font-family: MyFont;
-  src: url('../font/TrueType/TaipeiSansTCBeta-Regular.ttf')
+    font-family: MyFont;
+    src: url('../font/TrueType/TaipeiSansTCBeta-Regular.ttf')
 }
 
 @font-face {
     font-family: MyFont1;
     src: url('../font/TrueType/PublicPixel.ttf')
-  }
-body{
+}
+
+body {
     font-family: MyFont;
 }
+
 /* 默认样式 */
 .box {
     position: fixed;
@@ -40,31 +41,62 @@ body{
     padding: 10px;
     font-weight: bold;
 }
+
 #back-to-top {
     display: flex;
     align-items: center;
-  }
-.box img{
-    width: 30px;
-    height: 16px;
-    
 }
 
-/* 媒体查询 */
+.box img {
+    width: 30px;
+    height: 16px;
+
+}
+
+
+/* 响应式调整 */
 @media screen and (max-width: 768px) {
     .box {
+        position: fixed;
         top: 50px;
         left: 50px;
         width: 80px;
+        height: auto;
+        text-align: center;
     }
 
     .box a {
         font-size: 12px;
+        height: 25px;
+        line-height: 25px;
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    .box a:hover {
+        background-color: #fff;
+        border: 1px solid #000000;
+        box-shadow: 2px 2px 0px 1px rgba(230, 0, 18, 0.9);
+        border-radius: 6px;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .box img {
+        width: 20px;
+        height: 12px;
+    }
+
+    .top-n-b {
+        position: inherit;
+        width: 320px;
+        height: 50px;
     }
 }
 
+
 .top-n-b {
-    position:absolute;
+    position: absolute;
     display: flex;
     align-items: center;
     /* 将元素的定位方式设置为绝对定位 */
@@ -116,6 +148,7 @@ body{
     gap: 10px;
     justify-content: center;
     align-items: center;
+    width: 110px;
 }
 
 .avatar {
@@ -148,7 +181,7 @@ body{
 
 }
 
-.dropdown div{
+.dropdown div {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -170,6 +203,7 @@ body{
 
 .dropdown.show {
     display: flex;
+    padding: 10px 20px 10px 20px;
 }
 
 .top-n-b a {
@@ -178,8 +212,10 @@ body{
 
 }
 
+
+
 .container {
-    position:relative;
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -263,7 +299,7 @@ body{
 
 }
 
-.article .title a:hover{
+.article .title a:hover {
     color: #3370FF;
 }
 
@@ -279,16 +315,21 @@ body{
     color: white;
     padding: 3px 8px;
 }
-.article .l1{
+
+.article .l1 {
     background: #3370FF;
 }
 
-.article .l2{
+.article .l2 {
     background: #11be45;
 }
 
+.article .l3 {
+    background-color: palevioletred;
+}
 
-.article .preview{
+
+.article .preview {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -302,10 +343,10 @@ body{
 .article .preview .summary {
     font-size: 14px;
     color: #3b393a;
-    line-height:24px;
+    line-height: 24px;
 }
 
-hr{
+hr {
     margin: 20px 0px 20px 0px;
     color: #3b393a;
 }
@@ -316,9 +357,9 @@ hr{
     padding: 10px;
     color: #3b393a;
     padding: 50px;
-  }
+}
 
-  .down_bt {
+.down_bt {
     box-sizing: border-box;
     /* Auto layout */
     margin-top: 20px;
@@ -332,7 +373,7 @@ hr{
     border: 1px solid #FFFFFF;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     border-radius: 12px;
-
+    cursor: pointer
 }
 
 .down_bt p {
@@ -367,4 +408,50 @@ hr{
     transform: translateY(2px);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
     background-color: #D10000;
-  }
+}
+
+.warn img {
+    width: 18px;
+    height: 18px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    z-index: 999;
+}
+
+.relevant {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.relevant a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.relevant div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.relevant img {
+    width: 24px;
+    height: 24px;
+}

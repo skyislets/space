@@ -1,0 +1,92 @@
+<style>
+    .kongx {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        right: 50px;
+    }
+
+    .kongx .link {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .avatar {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+    }
+
+    .name {
+        height: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 12px;
+        color: #000000;
+    }
+
+    .dropdown {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drop_bt {
+        width: 20px;
+        height: 20px;
+        transform: rotate(0deg);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .dropdown img {
+        width: 24px;
+        height: 24px;
+        margin: auto;
+    }
+
+    .dropdown.show {
+        display: flex;
+    }
+</style>
+
+<script>
+    const link = document.querySelector('.kongx .link');
+    const dropdown = document.querySelector('.kongx .dropdown');
+    const drop_bt = document.querySelector('.kongx .drop_bt');
+
+    link.addEventListener('click', function() {
+        dropdown.classList.toggle('show');
+        drop_bt.style.transform = dropdown.classList.contains('show') ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+</script>
+
+<div class="kongx">
+    <a class="link" href="#">
+        <img class="avatar" src="./images/IMG_8340.jpg" alt="头像" />
+        <div class="name">空x</div>
+        <img class="drop_bt" src="./svg/lamb-bottom.svg">
+    </a>
+
+    <div class="dropdown">
+        <a href="mailto:baikongx@gmail.com?subject=请描述联系我的需求">
+            <div class='mail'>
+                <img src="./svg/mailsvg.svg" />
+                <span>邮箱</span>
+            </div>
+        </a>
+        <a id="wechat-link" href="#">
+            <div class="wechat">
+                <img src="./svg/wechat.svg">
+                <span>微信</span>
+            </div>
+        </a>
+    </div>
+</div>

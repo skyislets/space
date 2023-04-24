@@ -51,8 +51,37 @@
         <div class="item" id="about">
             <p class="hint">ABOUT</p>
             <p class="text">
-                期望通过这个网站学习JavaScript、CSS、HTML代码编写、React框架、SQL数据库管理、FigmaUI设计，并利用各种AI工具提高效率；会在此站分享建设过程、个人作品展示、原创内容（动态、文章、视频、音乐）。
+                期望通过这个网站学习JavaScript、CSS、HTML代码编写、React、Tailwind、FigmaUI设计，并利用各种AI工具提高效率；会在此站分享建设过程、作品项目展示、原创内容（动态、文章、视频、音乐）持续更新。
             </p>
+            <div class="relevant">
+                <a href="https://lmu9c5endh.feishu.cn/docx/T2ewdyobtoWDGNxw4kScQSwJnKf" target="_blank"
+                    rel="noreferrer">
+                    <div>
+                        <img src="./svg/lark.svg">
+                        <p>文档</p>
+                    </div>
+                </a>
+                <a href="https://modao.cc/proto/Kj7okWXrtk26ywfUky074/sharing?view_mode=read_only #BLOG-分享  "
+                    target="_blank" rel="noreferrer">
+                    <div>
+                        <img src="./svg/mackingbot.svg" alt="">
+                        <p>原型</p>
+                    </div>
+                </a>
+                <a href="https://www.figma.com/file/KzAXJUyD8SYA5jaKrMJ3g2/BLOG?node-id=0%3A1&t=yvd849zQtZot5OOY-1"
+                    target="_blank" rel="noreferrer">
+                    <div>
+                        <img src="./svg/Figma.svg" alt="">
+                        <p>UI</p>
+                    </div>
+                </a>
+                <a href="https://github.com/skyislets/space.git" target="_blank" rel="noreferrer">
+                    <div>
+                        <img src="./svg/github.svg" alt="">
+                        <p>源码</p>
+                    </div>
+                </a>
+            </div>
         </div>
 
         <div class="item" id="article">
@@ -66,9 +95,33 @@
                             品牌服务数字化供应链产品-PRD
                         </a>
                         <div class='label l1'>产品设计</div>
+                        <div class="warn" onmouseover="showTooltip()" onmouseout="hideTooltip()">
+                            <img src="./svg/warn.svg">
+                        </div>
+                        <div class="tooltip" id="tooltip">
+                            部分文档涉及上线商业产品需要密码访问，请联系博主告知需求获取密码
+                        </div>
                     </div>
                     <div class='preview'>
                         <img src="./images/pinpaifuwu.jpg" alt="" />
+                        <div class='summary'>
+                            基于业务模式，对于零售门店：通过核销、任务等功能规范线下导购销售、陈列、培训等业务场景，提供在售商品内容间接帮助其达成私域销售转化；对于品牌方：可视化了解渠道拓展...
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+
+                <div class='article'>
+                    <div class='title'>
+                        <a href="https://lmu9c5endh.feishu.cn/docx/QZA3dHHrwokgQPx4mN1cOF5Qnbg" target="_blank"
+                            rel="noreferrer">
+                            品牌服务数字化供应链项目规划
+                        </a>
+                        <div class='label l3'>项目规划</div>
+                    </div>
+                    <div class='preview'>
+                        <img src="./images/planning.jpg" alt="" />
                         <div class='summary'>
                             项目本身背景为将品牌传统向线下渠道拓展模式为样本向数字化模式转型，实现从品牌推广至数据复盘的规范化、流程化、数据化；期望能通过此平台让品牌方像运营线上一样运营线下...
                         </div>
@@ -100,12 +153,16 @@
             <p class="text">5年互联网产品经验，熟练掌握客户端&服务端产品设计，对to
                 b及SaaS/CRP/ERM平台产品有深入认识，擅长多角色、多端口、多业务流，业务管理及BI功能产品设计；有独立负责产品从0-1全流程搭建经验，能够基于业务模式...
                 <br />
-                <a href="./document/白雪松-baikongx@gmail.com.pdf" download style="text-decoration: none;">
+            <div style="display: block;">
+                <a href="./document/白雪松-baikongx@gmail.com.pdf" download style="text-decoration: none;" target="_blank"
+                    rel="noreferrer">
                     <button class='down_bt'>
                         <img src="./svg/down.svg" alt="icon" style="margin: auto;">
                         <p>下载PDF简历</p>
                     </button>
                 </a>
+            </div>
+
             </p>
         </div>
     </div>
@@ -113,8 +170,9 @@
         <div class='shengming'>©空X的个人网站</div>
     </div>
     <script src="./script/box.js"></script>
-    <script src="./script/蜘蛛网特效的副本.js"></script>
+    <script src="./script/bgeffects.js"></script>
     <script src="./script/topnav.js"></script>
+    <script src="./script/article.js"></script>
 </body>
 
 </html>
