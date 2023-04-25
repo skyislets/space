@@ -410,7 +410,7 @@ hr {
 }
 
 /* 响应式调整 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 828px) {
     .box {
         position: fixed;
         top: 50px;
