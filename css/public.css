@@ -10,6 +10,11 @@
 
 body {
     font-family: MyFont;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 0;
 }
 
 /* 默认样式 */
@@ -53,58 +58,11 @@ body {
 
 }
 
-
-/* 响应式调整 */
-@media screen and (max-width: 768px) {
-    .box {
-        position: fixed;
-        top: 50px;
-        left: 50px;
-        width: 80px;
-        height: auto;
-        text-align: center;
-    }
-
-    .box a {
-        font-size: 12px;
-        height: 25px;
-        line-height: 25px;
-        padding: 5px;
-        border: 1px solid rgba(0, 0, 0, 0);
-    }
-
-    .box a:hover {
-        background-color: #fff;
-        border: 1px solid #000000;
-        box-shadow: 2px 2px 0px 1px rgba(230, 0, 18, 0.9);
-        border-radius: 6px;
-        padding: 5px;
-        font-weight: bold;
-    }
-
-    .box img {
-        width: 20px;
-        height: 12px;
-    }
-
-    .top-n-b {
-        position: inherit;
-        width: 320px;
-        height: 50px;
-    }
-}
-
-
 .top-n-b {
-    position: absolute;
+    position: relative;
     display: flex;
     align-items: center;
-    /* 将元素的定位方式设置为绝对定位 */
-    top: 50px;
-    left: 50%;
-    /* 将元素的左侧位置设置为页面的中间 */
-    transform: translate(-50%, -50%);
-    /* 使用 transform 属性和 translate() 函数将元素向上和向左移动一定的距离，从而实现垂直居中 */
+    top: 30px;
     width: 640px;
     height: 50px;
 
@@ -209,7 +167,6 @@ body {
 .top-n-b a {
     text-decoration: none;
     color: inherit;
-
 }
 
 
@@ -221,11 +178,7 @@ body {
     padding: 0;
     width: 640px;
     height: auto;
-    left: 50%;
-    /* 左边缘居中 */
-    margin-left: -320px;
-    /* 左移自身宽度的一半 */
-    top: 150px;
+    top: 100px;
     gap: 50px;
 }
 
@@ -454,4 +407,94 @@ hr {
 .relevant img {
     width: 24px;
     height: 24px;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+    .box {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        width: 80px;
+        height: auto;
+        text-align: center;
+    }
+
+    .box a {
+        font-size: 12px;
+        height: 25px;
+        line-height: 25px;
+        padding: 5px;
+        border: 1px solid rgba(0, 0, 0, 0);
+    }
+
+    .box a:hover {
+        background-color: #fff;
+        border: 1px solid #000000;
+        box-shadow: 2px 2px 0px 1px rgba(230, 0, 18, 0.9);
+        border-radius: 6px;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .box img {
+        width: 20px;
+        height: 12px;
+    }
+
+
+
+    .top-n-b {
+        top: 33px;
+        width: 426px;
+    }
+
+    .container {
+        width: 426px;
+        height: auto;
+    }
+
+    .item {
+        width: 360px;
+        padding: 33px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .hint {
+        font-size: 18px;
+    }
+
+
+    .article {
+        gap: 10px;
+    }
+
+    .article .title {
+        gap: 10px;
+    }
+
+    .article .title a {
+        font-size: 14px;
+    }
+
+
+    .article .label {
+        font-size: 10px;
+    }
+
+    
+
+
+    .article .preview {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .article .preview img {
+        width: 157px;
+        height: 95px;
+    }
+
 }
